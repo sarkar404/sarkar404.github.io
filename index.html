@@ -78,7 +78,13 @@
         nav a:hover {
             color: #007acc;
         }
+		
+		nav a.active {
+			color: #007acc;
+			font-weight: bold;
+		}
 
+		
         .logo {
             font-weight: 700;
             font-size: 1.5rem;
@@ -298,6 +304,31 @@
                 grid-template-columns: 1fr;
             }
         }
+		.see-more-btn {
+			background-color: #007acc;
+			color: white;
+			padding: 0.5rem 1rem;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 1rem;
+			transition: background-color 0.3s ease;
+		}
+
+		.see-more-btn:hover {
+			background-color: #005f99;
+		}
+
+		.more-content {
+			display: none;
+			overflow: hidden;
+			transition: max-height 0.5s ease-out;
+		}
+		.more-content.open {
+			display: block;
+			max-height: 1000px; /* Adjust based on your content */
+		}
+
     </style>
 </head>
 <body>
@@ -335,80 +366,128 @@
 <section id="experience" class="section">
     <h2>Professional Experience</h2>
     <div class="experience-grid" style="flex-direction: column;">
+        <!-- Experience Card 1 -->
         <div class="experience-card" style="width: 100%;">
             <h3>Perisens GmbH</h3>
             <p class="designation">Project Development Engineer</p>
             <p class="duration">April 2020 - Present</p>
             <p class="location">Feldkirchen, Germany</p>
-			<ul style="padding-left: 30px;  text-align: justify;">
-            <li>Expertise in 802.11a/b/g/n/ac/ax/be, Bluetooth/BLE, and UWB technologies.</li>
-			<li>Developed methods for monitoring breathing estimation inside vehicles using wireless channel data from Wi-Fi and UWB signals.</li>
-			<li>Measured and analyzed Bluetooth signal strength, transmit power, and range; evaluated the advertising and scanning efficiency of a smartphone using a rotary platform for 360-degree analysis.</li>
-			<li>Performed comprehensive field and laboratory measurements, including evaluations of connection stability, reconnection performance, Tx Power, RSSI, throughput, data rates, latency, packet loss rates, and coverage area.</li>
-            <li>Assessed Wi-Fi features such as OFDMA, beamforming, EVM, MCS, antenna gain, SISO/MIMO performance, and frame aggregation efficiency.</li>
-			<li>Identified interference sources and coexistence impacts, tested roaming performance, transition times, and examined Wi-Fi security protocols.</li>
-			<li>Developed performance evaluation tools, managed test beds, automated test setups to streamline testing processes, and utilized RF test equipment effectively.</li>
-			<li>Conducted research on emerging wireless technologies, producing detailed measurement reports, presentations, and user guides.</li>
-			</ul>
+            <!-- Hidden content -->
+            <div class="more-content" style="display: none;">
+                <ul style="padding-left: 30px;  text-align: justify;">
+                    <li>Expertise in 802.11a/b/g/n/ac/ax/be, Bluetooth/BLE, and UWB technologies.</li>
+                    <li>Developed methods for monitoring breathing estimation inside vehicles using wireless channel data from Wi-Fi and UWB signals.</li>
+                    <li>Measured and analyzed Bluetooth signal strength, transmit power, and range; evaluated the advertising and scanning efficiency of a smartphone using a rotary platform for 360-degree analysis.</li>
+                    <li>Performed comprehensive field and laboratory measurements, including evaluations of connection stability, reconnection performance, Tx Power, RSSI, throughput, data rates, latency, packet loss rates, and coverage area.</li>
+                    <li>Assessed Wi-Fi features such as OFDMA, beamforming, EVM, MCS, antenna gain, SISO/MIMO performance, and frame aggregation efficiency.</li>
+                    <li>Identified interference sources and coexistence impacts, tested roaming performance, transition times, and examined Wi-Fi security protocols.</li>
+                    <li>Developed performance evaluation tools, managed test beds, automated test setups to streamline testing processes, and utilized RF test equipment effectively.</li>
+                    <li>Conducted research on emerging wireless technologies, producing detailed measurement reports, presentations, and user guides.</li>
+                </ul>
+            </div>
+            <!-- See More Button -->
+            <button class="see-more-btn">See More</button>
         </div>
+		
+		<!-- Experience Card 2 -->
         <div class="experience-card" style="width: 100%;">
             <h3>Perisens GmbH</h3>
             <p class="designation">Working Student</p>
             <p class="duration">January 2020 - March 2020 --> 3 mos</p>
             <p class="location">Feldkirchen, Germany</p>
-			<ul style="padding-left: 30px; text-align: justify;">
-            <li>Assisted with research and development and provided support to projects in Wireless Communications.</li>
-			</ul>
-        </div>
+			<!-- Hidden content -->
+            <div class="more-content" style="display: none;">
+				<ul style="padding-left: 30px; text-align: justify;">
+					<li>Assisted with research and development and provided support to projects in Wireless Communications.</li>
+				</ul>
+			</div>
+			<!-- See More Button -->
+            <button class="see-more-btn">See More</button>
+		</div>
+		
+		<!-- Experience Card 3 -->
         <div class="experience-card" style="width: 100%;">
             <h3>Perisens GmbH</h3>
             <p class="designation">Master Thesis Student</p>
             <p class="duration">July 2019 - December 2019 --> 6 mos</p>
             <p class="location">Feldkirchen, Germany</p>
-			<ul style="padding-left: 30px; text-align: justify;">
-            <li>"In-Vehicle Human Presence Detection and Breathing Rate Estimation using IEEE 802.11n Channel State Information"
-				<p><i>This master's thesis explores the innovative use of WLAN technology, particularly leveraging the Channel State Information (CSI) from IEEE 802.11n, to detect human presence and estimate breathing rates within vehicles. By analyzing the amplitude and phase shifts in Wi-Fi signals, the system accurately identifies motion and the periodic movements associated with breathing. Extensive tests conducted in a Mercedes-Benz E-Class vehicle demonstrated the system's effectiveness across various seating arrangements and transmitter-receiver configurations. The research offers potential applications in child presence detection, driver fatigue monitoring, and in-vehicle health monitoring, providing a promising non-invasive solution for enhancing automotive safety systems.</i></p>
-			</li>
-		</ul>
-        </div>
+			<!-- Hidden content -->
+            <div class="more-content" style="display: none;">
+				<ul style="padding-left: 30px; text-align: justify;">
+					<li>"In-Vehicle Human Presence Detection and Breathing Rate Estimation using IEEE 802.11n Channel State Information"
+						<p><i>This master's thesis explores the innovative use of WLAN technology, particularly leveraging the Channel State Information (CSI) from IEEE 802.11n, to detect human presence and estimate breathing rates within vehicles. By analyzing the amplitude and phase shifts in Wi-Fi signals, the system accurately identifies motion and the periodic movements associated with breathing. Extensive tests conducted in a Mercedes-Benz E-Class vehicle demonstrated the system's effectiveness across various seating arrangements and transmitter-receiver configurations. The research offers potential applications in child presence detection, driver fatigue monitoring, and in-vehicle health monitoring, providing a promising non-invasive solution for enhancing automotive safety systems.</i></p>
+					</li>
+				</ul>
+			</div>
+			<!-- See More Button -->
+            <button class="see-more-btn">See More</button>
+		</div>
+		
+		<!-- Experience Card 4 -->
         <div class="experience-card" style="width: 100%;">
             <h3>Perisens GmbH</h3>
             <p class="designation">Internee</p>
             <p class="duration">April 2019 - June 2019 --> 3 mos</p>
             <p class="location">Feldkirchen, Germany</p>
-			<ul style="padding-left: 30px; text-align: justify;">
-            <li>Modified existing Matlab code for transmission and reception of WLAN packets using SMBV 100a vector Signal Generator and FSVR real-time Spectrum Analyzer respectively.</li>
-			<li>Did Analysis of Multi-Path Channels Using WLAN Packets Preamble.</li>
-			</ul>
-        </div>
+			<!-- Hidden content -->
+            <div class="more-content" style="display: none;">
+				<ul style="padding-left: 30px; text-align: justify;">
+					<li>Modified existing Matlab code for transmission and reception of WLAN packets using SMBV 100a vector Signal Generator and FSVR real-time Spectrum Analyzer respectively.</li>
+					<li>Did Analysis of Multi-Path Channels Using WLAN Packets Preamble.</li>
+				</ul>
+			</div>
+			<!-- See More Button -->
+            <button class="see-more-btn">See More</button>
+		</div>
+		
+		<!-- Experience Card 5 -->
         <div class="experience-card" style="width: 100%;">
             <h3>Sukkur IBA University</h3>
             <p class="designation">Research Assistant</p>
             <p class="duration">May 2016 - March 2018 --> 1 yr 11 mos</p>
             <p class="location">Sukkur, Pakistan</p>
-			<ul style="padding-left: 30px; text-align: justify;">
-            <li>Digital Fabrication, Designing & Testing Electronics Circuits and Assisting students to create projects.</li>
-			</ul>
-        </div>
+			<!-- Hidden content -->
+            <div class="more-content" style="display: none;">
+				<ul style="padding-left: 30px; text-align: justify;">
+					<li>Digital Fabrication, Designing & Testing Electronics Circuits and Assisting students to create projects.</li>
+				</ul>
+			</div>
+			<!-- See More Button -->
+            <button class="see-more-btn">See More</button>
+		</div>
+		
+		<!-- Experience Card 6 -->
         <div class="experience-card" style="width: 100%;">
             <h3>Sukkur IBA University</h3>
             <p class="designation">Visiting Faculty</p>
             <p class="duration">August 2015 - March 2016 --> 8 mos</p>
             <p class="location">Sukkur, Pakistan</p>
-			<ul style="padding-left: 30px; text-align: justify;">
-            <li>Part time lecturer for short course of Electrical Engineering focusing on Building Electrician.</li>
-			<li>Prepared and delivered lectures and conducted LAB experiments with students.</li>
-			</ul>
-        </div>
+			<!-- Hidden content -->
+            <div class="more-content" style="display: none;">
+				<ul style="padding-left: 30px; text-align: justify;">
+					<li>Part time lecturer for short course of Electrical Engineering focusing on Building Electrician.</li>
+					<li>Prepared and delivered lectures and conducted LAB experiments with students.</li>
+				</ul>
+			</div>
+			<!-- See More Button -->
+            <button class="see-more-btn">See More</button>
+		</div>
+		
+		<!-- Experience Card 7 -->
         <div class="experience-card" style="width: 100%;">
             <h3>Pakistan Telecommunication Company Limited (PTCL)</h3>
             <p class="designation">Internee</p>
             <p class="duration">June 2015 - July 2015 --> 2 mos</p>
             <p class="location">Sukkur, Pakistan</p>
-			<ul style="padding-left: 30px; text-align: justify;">
-            <li>Gained theoretical and practical experience while working in various departments, including Switching, Transmission, and Optical Fiber Communication.</li>
-			</ul>
-        </div>
+			<!-- Hidden content -->
+            <div class="more-content" style="display: none;">
+				<ul style="padding-left: 30px; text-align: justify;">
+					<li>Gained theoretical and practical experience while working in various departments, including Switching, Transmission, and Optical Fiber Communication.</li>
+				</ul>
+			</div>
+			<!-- See More Button -->
+            <button class="see-more-btn">See More</button>
+		</div>
     </div>
 </section>
 
@@ -418,39 +497,84 @@
         <div class="skills-grid">
             <div class="skill-card">
                 <h3>Programming</h3>
-                <p>MATLAB, Python, Linux Bash, Windows Batch & PowerShell, C, C++</p>
+				<!-- Hidden content -->
+				<div class="more-content" style="display: none;">
+					<p>MATLAB | Python | Linux Bash | Windows Batch & PowerShell | C | C++</p>
+				</div>
+				<!-- See More Button -->
+				<button class="see-more-btn">See More</button>
             </div>
             <div class="skill-card">
                 <h3>Communication and Testing</h3>
-                <p>SSH, PuTTY, ADB, Win-SCP, TCP/IP, UDP IPERF, Ping, Wireshark, Ellisys Bluetooth Explorer & Analyzer, Wi-Fi Sniffer</p>
+				<!-- Hidden content -->
+				<div class="more-content" style="display: none;">
+					<p>SSH | PuTTY | ADB | Win-SCP | TCP/IP | UDP | IPERF | Ping | Wireshark | Ellisys Bluetooth Explorer & Analyzer | Wi-Fi Sniffer</p>
+				</div>
+				<!-- See More Button -->
+				<button class="see-more-btn">See More</button>
             </div>
             <div class="skill-card">
                 <h3>RF Measurement Equipment</h3>
-                <p>Spectrum Analyzer, Signal Generator, Network Analyzer, Channel Emulator, USRP, UHD, GNURADIO</p>
+				<!-- Hidden content -->
+				<div class="more-content" style="display: none;">
+					<p>Spectrum Analyzer | Signal Generator | Network Analyzer | Channel Emulator | USRP | UHD | GNURADIO</p>
+				</div>
+				<!-- See More Button -->
+				<button class="see-more-btn">See More</button>
             </div>
             <div class="skill-card">
                 <h3>Automotive Telematics</h3>
-                <p>ET-Framework & TUT (Telematic Update Tool), NTG6, NTG7, Gen20x.i2, Gen20x.i3</p>
+				<!-- Hidden content -->
+				<div class="more-content" style="display: none;">
+					<p>ET-Framework & TUT (Telematic Update Tool |  NTG6 | NTG7 | Gen20x.i2 | Gen20x.i3</p>
+				</div>
+				<!-- See More Button -->
+				<button class="see-more-btn">See More</button>
             </div>
             <div class="skill-card">
                 <h3>Operating Systems</h3>
-                <p>Android Automotive, QNX, RichOS, Linux, Windows</p>
+				<!-- Hidden content -->
+				<div class="more-content" style="display: none;">
+					<p>Android Automotive | QNX | RichOS | Linux | Windows</p>
+				</div>
+				<!-- See More Button -->
+				<button class="see-more-btn">See More</button>
             </div>
             <div class="skill-card">
                 <h3>Embedded</h3>
-                <p>NRF52 DK (BLE), UWB DWM1000/3000, Raspberry Pi, Arduino, ESP32</p>
+				<!-- Hidden content -->
+				<div class="more-content" style="display: none;">
+					<p>NRF52 DK (BLE) | UWB DWM1000/3000 | Raspberry Pi | Arduino | ESP32</p>
+				</div>
+				<!-- See More Button -->
+				<button class="see-more-btn">See More</button>
             </div>
             <div class="skill-card">
                 <h3>Collaboration and Version Control</h3>
-                <p>Git, Github, Confluence, DVC (Data Version Control)</p>
+				<!-- Hidden content -->
+				<div class="more-content" style="display: none;">
+					<p>Git | Github | Confluence | DVC (Data Version Control)</p>
+				</div>
+				<!-- See More Button -->
+				<button class="see-more-btn">See More</button>
             </div>
             <div class="skill-card">
                 <h3>Machine Learning & Deep Learning</h3>
-                <p>Scikit-Learn, XGBoost, TensorFlow, Keras, PyTorch, CNN, Pandas, NumPy, Matplotlib, Seaborn, Docker, and MLflow </p>
+				<!-- Hidden content -->
+				<div class="more-content" style="display: none;">
+					<p>Scikit-Learn | XGBoost | TensorFlow | Keras | PyTorch | CNN | Pandas | NumPy | Matplotlib | Seaborn | Docker | MLflow </p>
+				</div>
+				<!-- See More Button -->
+				<button class="see-more-btn">See More</button>
             </div>
             <div class="skill-card">
                 <h3>Linguistic Proficiency</h3>
-                <p>English: Professional proficiency<br>German: Intermediate (B1)<br>Sindhi and Urdu: Native proficiency</p>
+				<!-- Hidden content -->
+				<div class="more-content" style="display: none;">
+					<p>English: Professional proficiency<br>German: Intermediate (B1)<br>Sindhi and Urdu: Native proficiency</p>
+				</div>
+				<!-- See More Button -->
+				<button class="see-more-btn">See More</button>
             </div>
         </div>
     </section>
@@ -466,24 +590,34 @@
             <p class="designation">Master of Science (M.Sc.) in Electronics Engineering</p>
             <p class="duration">March 2018 - March 2020</p>
             <p class="location">Bremen, Germany</p>
-            <p><strong>Thesis:</strong> In-Vehicle Human Presence Detection and Breathing Rate Estimation using IEEE 802.11n Channel State Information</p>
-            <p><strong>Relevant Coursework:</strong> Communication Networks, Optical Communication, Laser Systems & Applications, Analogue & Mixed Signal Circuit Design, Micro Technology and Micro Systems, Material Sceince, and Project Management & Team-building</p>
-			<p><strong>GPA:</strong> 1.6 (German Grading Scale)</p>
-        </div>
-        
+			<!-- Hidden content -->
+            <div class="more-content" style="display: none;">
+				<p><strong>Thesis:</strong> In-Vehicle Human Presence Detection and Breathing Rate Estimation using IEEE 802.11n Channel State Information</p>
+				<p><strong>Relevant Coursework:</strong> Communication Networks, Optical Communication, Laser Systems & Applications, Analogue & Mixed Signal Circuit Design, Micro Technology and Micro Systems, Material Sceince, and Project Management & Team-building</p>
+				<p><strong>GPA:</strong> 1.6 (German Grading Scale)</p>
+			</div>
+			<!-- See More Button -->
+            <button class="see-more-btn">See More</button>
+		</div>
+		
         <!-- Bachelor of Engineering (B.E.) in Electrical (Telecommunication) Engineering -->
         <div class="experience-card" style="width: 100%;">
             <h3>Sukkur IBA University</h3>
             <p class="designation">Bachelor of Engineering (B.E.) in Electrical (Telecommunication) Engineering</p>
             <p class="duration">August 2011 - November 2015</p>
             <p class="location">Sukkur, Pakistan</p>
-            <p><strong>Thesis:</strong> Interference Alignment in Two-tier Heterogeneous Cellular Network</p>
-            <p><strong>Relevant Coursework:</strong> Wireless & Mobile Communication Networks, Analogue and Digital Communication, Digital Signal Processing, Microwave & RF Engineering, Algorithms & Data Structures, Programming (C++) for Engineers, and Digital Design</p>
-            <p><strong>Honors & Awards:</strong> Awarded with fully funded "THP Scholarship”" for foundation semester and "NICT Scholarship" by Ministry of IT Pakistan for whole degree program</p>
-            <p><strong>Extracurricular Activities:</strong> Member of IEEE Student Branch as a "Head of Documentation" and Volunteer at Green Office (Environment Sustainability)</p>
-			<p><strong>CGPA:</strong> 2.9/4.0</p>
-        </div>
-
+			<!-- Hidden content -->
+            <div class="more-content" style="display: none;">
+				<p><strong>Thesis:</strong> Interference Alignment in Two-tier Heterogeneous Cellular Network</p>
+				<p><strong>Relevant Coursework:</strong> Wireless & Mobile Communication Networks, Analogue and Digital Communication, Digital Signal Processing, Microwave & RF Engineering, Algorithms & Data Structures, Programming (C++) for Engineers, and Digital Design</p>
+				<p><strong>Honors & Awards:</strong> Awarded with fully funded "THP Scholarship”" for foundation semester and "NICT Scholarship" by Ministry of IT Pakistan for whole degree program</p>
+				<p><strong>Extracurricular Activities:</strong> Member of IEEE Student Branch as a "Head of Documentation" and Volunteer at Green Office (Environment Sustainability)</p>
+				<p><strong>CGPA:</strong> 2.9/4.0</p>
+			</div>
+			<!-- See More Button -->
+            <button class="see-more-btn">See More</button>
+		</div>
+		
     </div>
 </section>
 
@@ -493,38 +627,51 @@
         <div class="experience-grid">
             <div class="experience-card">
 				<p>DataCamp Career Track <strong> Machine Learning Engineer</strong> 2024</p>
-				<ol style="padding-left: 30px;  text-align: justify;">
-				<li>MLOps Concepts </li>
-				<li>End-to-End Machine Learning</li>
-				<li>Developing Machine Learning Models for Production</li>
-				<li>Introduction Shell</li>
-				<li>Predictive Modeling for Agriculture (Project)</li>
-				<li>MLOps Development Life Cycling</li>
-				<li>Introduction to MLflow</li>
-				<li>Fully Automated MLOps</li>
-				<li>Predicting Temperature in London (Project)</li>
-				<li>ETL and ELT in Python</li>
-				<li>Monitoring Machine Learning Concepts</li>
-				<li>Monitoring Machine Learning in Python</li>
-				<li>Developing Machine Learning Models for Production</li>
-				<li>Introduction to Docker</li>
-				<li>CI/CD for Machine Learning</li>
-				</ol>
-            </div>
+				<!-- Hidden content -->
+				<div class="more-content" style="display: none;">
+					<ol style="padding-left: 30px;  text-align: justify;">
+						<li>MLOps Concepts </li>
+						<li>End-to-End Machine Learning</li>
+						<li>Developing Machine Learning Models for Production</li>
+						<li>Introduction Shell</li>
+						<li>Predictive Modeling for Agriculture (Project)</li>
+						<li>MLOps Development Life Cycling</li>
+						<li>Introduction to MLflow</li>
+						<li>Fully Automated MLOps</li>
+						<li>Predicting Temperature in London (Project)</li>
+						<li>ETL and ELT in Python</li>
+						<li>Monitoring Machine Learning Concepts</li>
+						<li>Monitoring Machine Learning in Python</li>
+						<li>Developing Machine Learning Models for Production</li>
+						<li>Introduction to Docker</li>
+						<li>CI/CD for Machine Learning</li>
+					</ol>
+				</div>
+				<!-- See More Button -->
+				<button class="see-more-btn">See More</button>
+			</div>
+			
             <div class="experience-card">
 				<p>DataCamp <strong>Individual Courses</strong> 2024</p>
-				<ol style="padding-left: 30px;  text-align: justify;">
-				<li>Introduction to Deep Learning in Python</li>
-				<li>Advanced Deep Learning with Keras</li>
-				<li>Image Modeling with Keras</li>
-				</ol>
-            </div>
+				<!-- Hidden content -->
+				<div class="more-content" style="display: none;">
+					<ol style="padding-left: 30px;  text-align: justify;">
+						<li>Introduction to Deep Learning in Python</li>
+						<li>Advanced Deep Learning with Keras</li>
+						<li>Image Modeling with Keras</li>
+					</ol>
+				</div>
+				<!-- See More Button -->
+				<button class="see-more-btn">See More</button>
+			</div>
             <div class="experience-card">
                 <p>Learn Python The Complete Python Programming Course from Udemy</p>
             </div>
+			
 			<div class="experience-card">
                 <p>telc Deutsch B1</p>
             </div>
+			
         </div>
     </section>
 
@@ -553,34 +700,116 @@
     </footer>
 
     <!-- JavaScript for smooth scrolling -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                window.scrollTo({
-                    top: target.offsetTop,
-                    behavior: 'smooth'
-                });
-            });
-        });
+<!-- JavaScript for smooth scrolling and See More functionality -->
+	<script>
+		// Smooth Scrolling
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				const target = document.querySelector(this.getAttribute('href'));
+				window.scrollTo({
+					top: target.offsetTop,
+					behavior: 'smooth'
+				});
+			});
+		});
 
-        // Show back-to-top button when scrolling
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            const backToTopButton = document.querySelector('.back-to-top');
-            if (scrollPosition > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
+		// Show back-to-top button when scrolling
+		window.addEventListener('scroll', function() {
+			const scrollPosition = window.scrollY;
+			const backToTopButton = document.querySelector('.back-to-top');
+			if (scrollPosition > 300) {
+				backToTopButton.style.display = 'block';
+			} else {
+				backToTopButton.style.display = 'none';
+			}
+		});
+		
+		// Disable right-click and text selection
+		document.addEventListener('contextmenu', function(e) {
+			e.preventDefault();
+		});
+
+		// See More / See Less functionality for Experience Cards
+		document.querySelectorAll('.see-more-btn').forEach(button => {
+			button.addEventListener('click', function() {
+				const moreContent = this.previousElementSibling;  // Select the sibling 'more-content' div
+				if (moreContent.style.display === "none" || moreContent.style.display === "") {
+					moreContent.style.display = "block";  // Show more content
+					this.textContent = "See Less";  // Change button text
+				} else {
+					moreContent.style.display = "none";  // Hide more content
+					this.textContent = "See More";  // Change button text back to 'See More'
+				}
+			});
+		});
+		
+// Function to handle the intersection observer callback
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        const navLinks = document.querySelectorAll('nav a');
+        const currentSectionId = entry.target.id;
+
+        // Check if the section is intersecting with the viewport
+        if (entry.isIntersecting) {
+            // Remove 'active' class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+            // Add 'active' class to the link corresponding to the intersecting section
+            const activeLink = document.querySelector(`nav a[href="#${currentSectionId}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
             }
-        });
+        }
+    });
+}
 
-        // Disable right-click and text selection
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-    </script>
+// Options for the intersection observer
+const options = {
+    root: null, // Use the viewport as root
+    rootMargin: '0px', // No margin around the root
+    threshold: [0.1, 0.9] // Trigger when 10% and 90% of the section is visible
+};
+
+// Create the intersection observer
+const observer = new IntersectionObserver(handleIntersection, options);
+
+// Observe each section
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
+
+// Fallback for long sections (like "Experience")
+window.addEventListener('scroll', function() {
+    let experienceSection = document.querySelector('#experience');
+    let skillsSection = document.querySelector('#skills');
+    let navLinks = document.querySelectorAll('nav a');
+
+    let experienceTop = experienceSection.offsetTop;
+    let experienceHeight = experienceSection.offsetHeight;
+    let skillsTop = skillsSection.offsetTop;
+
+    let scrollPos = window.scrollY || document.documentElement.scrollTop;
+
+    // If the user is within the "Experience" section, keep it highlighted
+    if (scrollPos >= experienceTop && scrollPos < experienceTop + experienceHeight) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        let experienceLink = document.querySelector('nav a[href="#experience"]');
+        experienceLink.classList.add('active');
+    }
+
+    // Ensure "Skills" section gets highlighted properly once "Experience" section ends
+    if (scrollPos >= skillsTop && scrollPos < skillsTop + skillsSection.offsetHeight) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        let skillsLink = document.querySelector('nav a[href="#skills"]');
+        skillsLink.classList.add('active');
+    }
+});
+
+
+
+		
+	</script>
+
 
     <!-- Back to top button -->
     <a href="#top" class="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
