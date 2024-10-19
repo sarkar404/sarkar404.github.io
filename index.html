@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Muhammad Manzar Hussain | Portfolio</title>
+    <title>Muhammad Manzar Hussain</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Wireless Communication Engineer with expertise in Automotive Telematics, RF Measurement, and Machine Learning. Skilled in Wi-Fi, Bluetooth, UWB, and emerging wireless technologies.">
     <meta name="keywords" content="Wireless Communication Engineer, Automotive Telematics, Machine Learning, Wi-Fi, Bluetooth, UWB, RF, Data Analysis, Test Automation">
     <meta name="author" content="Muhammad Manzar Hussain">
-    <meta property="og:title" content="Muhammad Manzar Hussain | Portfolio">
+    <meta property="og:title" content="Muhammad Manzar Hussain">
     <meta property="og:description" content="Wireless Communication Engineer specializing in Wi-Fi, Bluetooth, UWB, and automotive telematics.">
     <meta property="og:image" content="url_to_your_image.jpg">
     <meta property="og:url" content="http://yourwebsite.com">
@@ -378,29 +378,86 @@
             background-color: #005f99;
         }
 
+
+
+
+		.flip-card-container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+			gap: 80px;
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.flip-card {
+			background-color: transparent;
+			width: 100%;
+			height: 300px;
+			perspective: 1000px;
+		}
+
+		.flip-card-inner {
+			position: relative;
+			width: 100%;
+			height: 115%;
+			text-align: center;
+			transition: transform 0.8s;
+			transform-style: preserve-3d;
+		}
+
+		.flip-card:hover .flip-card-inner {
+			transform: rotateY(180deg);
+		}
+
+		.flip-card-front, .flip-card-back {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		.flip-card-front {
+			background-color: #007acc;
+			color: white;
+			padding: 20px;
+		}
+
+		.flip-card-back {
+			background-color: white;
+			color: #333;
+			transform: rotateY(180deg);
+			padding: 20px;
+		}
+
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 3rem;
             }
-
+			
             .hero p {
                 font-size: 1.2rem;
             }
-
+			
             .skills-grid {
                 grid-template-columns: 1fr;
             }
-
+			
             .experience-grid {
                 flex-direction: column;
             }
-
+			
             .experience-card {
                 width: 100%;
 				margin-bottom: 2rem;
             }
-
+			
             .education-grid {
                 grid-template-columns: 1fr;
             }
@@ -415,11 +472,11 @@
 			margin-top: 1rem;
 			transition: background-color 0.3s ease;
 		}
-
+		
 		.see-more-btn:hover {
 			background-color: #005f99;
 		}
-
+		
 		.more-content {
 			<!-- display: none; -->
 			max-height: 0;
@@ -475,8 +532,7 @@
 			<!-- Experience Card 1 -->
 			<div class="experience-card" style="width: 100%;">
 				<h3>Perisens GmbH</h3>
-				<p class="designation">Project Development Engineer</p>
-				<p><em>Developed non-invasive health monitoring solutions using Wi-Fi signals</em></p>
+				<p class="designation"><em>Project Development Engineer</em></p>
 				<div class="duration-location">
 					<p class="duration">April 2020 - Present</p>
 					<p class="location">Feldkirchen, Germany</p>
@@ -484,9 +540,8 @@
 				<!-- Hidden content -->
 				<div class="more-content" style="display: none;">
 					<ul style="padding-left: 30px;  text-align: justify;">
-						<li><i class="fas fa-wifi"></i> Expertise in 802.11a/b/g/n/ac/ax/be, Bluetooth/BLE, and UWB technologies.</li>
 						<li>Expertise in 802.11a/b/g/n/ac/ax/be, Bluetooth/BLE, and UWB technologies.</li>
-						<li>Developed methods for monitoring breathing estimation inside vehicles using wireless channel data from Wi-Fi and UWB signals.</li>
+						<li>Developed in-vehicles non-invasive health monitoring solutions leveraging Wi-Fi & UWB.</li>
 						<li>Measured and analyzed Bluetooth signal strength, transmit power, and range; evaluated the advertising and scanning efficiency of a smartphone using a rotary platform for 360-degree analysis.</li>
 						<li>Performed comprehensive field and laboratory measurements, including evaluations of connection stability, reconnection performance, Tx Power, RSSI, throughput, data rates, latency, packet loss rates, and coverage area.</li>
 						<li>Assessed Wi-Fi features such as OFDMA, beamforming, EVM, MCS, antenna gain, SISO/MIMO performance, and frame aggregation efficiency.</li>
@@ -615,7 +670,6 @@
 		</div>
 	</section>
 
-	
 	<!-- Skills Section -->
     <section id="skills" class="section">
 		<h2>Skills</h2>
@@ -631,11 +685,11 @@
 					<h3>Programming</h3>
 					<div class="sub-skills">
 						<ul>
-							<li data-level="Expert (80-100%)">MATLAB</li>
-							<li data-level="Expert (80-100%)">Python</li>
-							<li data-level="Intermediate (40-60%)">Linux Bash</li>
-							<li data-level="Intermediate (40-60%)">Windows Batch & PowerShell</li>
-							<li data-level="Beginner (20-40%)">C & C++</li>
+							<li data-level="Expert (90-100%)">MATLAB</li>
+							<li data-level="Expert (90-100%)">Python</li>
+							<li data-level="Advanced (70-90%)">Linux Bash</li>
+							<li data-level="Advanced (70-90%)">Windows Batch & PowerShell</li>
+							<li data-level="Intermediate (40-70%)">C & C++</li>
 						</ul>
 					</div>
 				</div>
@@ -648,12 +702,12 @@
 					<h3>Communication & Testing</h3>
 					<div class="sub-skills">
 						<ul>
-							<li data-level="Expert (80-100%)">TCP/IP & UDP</li>
-							<li data-level="Expert (80-100%)">iperf/jPerf, Ping, & traceroot</li>
-							<li data-level="Advanced (60-80%)">SSH, PuTTY, & Win-SCP</li>
-							<li data-level="Intermediate (40-60%)">ADB</li>
+							<li data-level="Expert (90-100%)">TCP/IP & UDP</li>
+							<li data-level="Expert (90-100%)">iperf/jPerf, Ping, & traceroot</li>
+							<li data-level="Expert (90-100%)">SSH, PuTTY, & Win-SCP</li>
+							<li data-level="Expert (90-100%)">ADB</li>
 							<li data-level="Expert (80-100%)"> Wireshark & Wi-Fi Sniffer</li>
-							<li data-level="Expert (80-100%)">Ellysis Bluetooth Explorer & Analyzer</li>
+							<li data-level="Advanced (70-90%)">Ellysis Bluetooth Explorer & Analyzer</li>
 						</ul>
 					</div>
 				</div>
@@ -666,9 +720,9 @@
 					<h3>RF Measurement Equipment</h3>
 					<div class="sub-skills">
 						<ul>
-							<li data-level="Expert (80-100%)">Spectrum Analyzer</li>
-							<li data-level="Advanced (60-80%)">Signal Generator</li>
-							<li data-level="Advanced (60-80%)">Network Analyzer</li>
+							<li data-level="Expert (90-100%)">Spectrum Analyzer</li>
+							<li data-level="Advanced (70-90%)">Signal Generator</li>
+							<li data-level="Advanced (70-90%)">Network Analyzer</li>
 							<li data-level="Intermediate (40-60%)">Channel Emulator</li>
 							<li data-level="Beginner (20-40%)">UHD, USRP, & GNURADIO</li>
 						</ul>
@@ -685,9 +739,9 @@
 					<h3>Automotive Telematics</h3>
 					<div class="sub-skills">
 						<ul>
-							<li data-level="Advanced (60-80%)">ET-Framework & TUT</li>
-							<li data-level="Intermediate (40-60%)">NTG6 & NTG7</li>
-							<li data-level="Intermediate (40-60%)">CIVIC Gen20x.i2 & i3</li>
+							<li data-level="Expert (90-100%)">ET-Framework & TUT</li>
+							<li data-level="Expert (90-100%)">NTG6 & NTG7</li>
+							<li data-level="Expert (90-100%)">CIVIC Gen20x.i2 & i3</li>
 						</ul>
 					</div>
 				</div>
@@ -700,10 +754,10 @@
 					<h3>Operating Systems</h3>
 					<div class="sub-skills">
 						<ul>
-							<li data-level="Beginner (20-40%)">QNX & RichOS</li>
-							<li data-level="Intermediate (40-60%)">Android Automotive</li>
-							<li data-level="Advanced (60-80%)">Linux</li>
-							<li data-level="Intermediate (40-60%)">Windows</li>
+							<li data-level="Expert (90-100%)">QNX & RichOS</li>
+							<li data-level="Advanced (70-90%))">Android Automotive</li>
+							<li data-level="Advanced (70-90%)">Linux</li>
+							<li data-level="Expert (90-100%)">Windows</li>
 						</ul>
 					</div>
 				</div>
@@ -716,10 +770,10 @@
 					<h3>Embedded Systems</h3>
 					<div class="sub-skills">
 						<ul>
-							<li data-level="Advanced (60-80%)">NRF52 DK (BLE)</li>
-							<li data-level="Advanced (60-80%)">UWB DWM1000/3000</li>
-							<li data-level="Intermediate (40-60%)">Raspberry Pi</li>
-							<li data-level="Intermediate (40-60%)">Arduino & ESP32</li>
+							<li data-level="Advanced (70-90%)">NRF52 DK (BLE)</li>
+							<li data-level="Advanced (70-90%)">UWB DWM1000/3000</li>
+							<li data-level="Advanced (70-90%)">Raspberry Pi</li>
+							<li data-level="Advanced (70-90%)">Arduino & ESP32</li>
 						</ul>
 					</div>
 				</div>
@@ -734,13 +788,13 @@
 					<h3>Version Control & Documentation</h3>
 					<div class="sub-skills">
 						<ul>
-							<li data-level="Advanced (60-80%)">Git & Gitlab</li>
-							<li data-level="Intermediate (40-60%)">Confluence</li>
-							<li data-level="Intermediate (40-60%)">Latex & MS-Office</li>
+							<li data-level="Advanced (70-90%)">Git & Gitlab</li>
+							<li data-level="Expert (90-100%)">Confluence</li>
+							<li data-level="Expert (90-100%)">Latex & MS-Office</li>
 						</ul>
 					</div>
 				</div>
-            
+
 				<!-- Machine Learning & Deep Learning Skill Card -->
 				<div class="skill-card" onmouseover="expandCard(this, 0)" onmouseout="shrinkCard(this, 0)">
 					<div class="progress-circle">
@@ -749,12 +803,12 @@
 					<h3>Machine & Deep Learning</h3>
 					<div class="sub-skills">
 						<ul>
-							<li data-level="Advanced (60-80%)">Scikit-Learn & XGBoost</li>
-							<li data-level="Intermediate (40-60%)">TesorFlow & Keras</li>
-							<li data-level="Intermediate (40-60%)">Pytorch & CNNs</li>
-							<li data-level="Intermediate (40-60%)">Pandas & Numpy</li>
-							<li data-level="Intermediate (40-60%)">Matplotlib & Seaborn</li>
-							<li data-level="Intermediate (40-60%)">Docker. MLFlow, DVC</li>
+							<li data-level="Beginner (20-40%)">Scikit-Learn & XGBoost</li>
+							<li data-level="Beginner (20-40%)">TesorFlow & Keras</li>
+							<li data-level="Beginner (20-40%)">Pytorch & CNNs</li>
+							<li data-level="Beginner (20-40%)">Pandas & Numpy</li>
+							<li data-level="Beginner (20-40%)">Matplotlib & Seaborn</li>
+							<li data-level="Beginner (20-40%)">Docker. MLFlow, DVC</li>
 						</ul>
 					</div>
 				</div>
@@ -767,10 +821,10 @@
 					<h3>Linguistic Proficiency</h3>
 					<div class="sub-skills">
 						<ul>
-							<li data-level="Advanced (60-80%)">English</li>
+							<li data-level="Advanced (70-90%)">English</li>
 							<li data-level="Intermediate (40-60%)">German</li>
-							<li data-level="Intermediate (40-60%)">Sindh</li>
-							<li data-level="Intermediate (40-60%)">Urdu</li>
+							<li data-level="Expert (90-100%)">Sindhi</li>
+							<li data-level="Expert (90-100%)">Urdu</li>
 						</ul>
 					</div>
 				</div>
@@ -825,60 +879,91 @@
 		
 		</div>
 	</section>
+	
+	
+	
+	 <!-- Courses and Certifications Section -->
+	<section id="courses" class="section">
+		<h2>Courses and Certifications</h2>
+		<div class="flip-card-container">
+			<!-- Card 1 -->
+				<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<h3>Machine Learning Engineer</h3>
+						<p>DataCamp Career Track 2024</p>
+					</div>
+					<div class="flip-card-back">
+						<ol>
+							<li>MLOps Concepts </li>
+							<li>End-to-End Machine Learning</li>
+							<li>Developing Machine Learning Models for Production</li>
+							<li>Introduction Shell</li>
+							<li>Predictive Modeling for Agriculture (Project)</li>
+							<li>MLOps Development Life Cycling</li>
+							<li>Introduction to MLflow</li>
+							<li>Fully Automated MLOps</li>
+							<li>Predicting Temperature in London (Project)</li>
+							<li>ETL and ELT in Python</li>
+							<li>Monitoring Machine Learning Concepts</li>
+							<li>Monitoring Machine Learning in Python</li>
+							<li>Developing Machine Learning Models for Production</li>
+							<li>Introduction to Docker</li>
+							<li>CI/CD for Machine Learning</li>
+						</ol>
+					</div>
+				</div>
+			</div>
 
-    <!-- Courses and Certifications Section -->
-    <section id="courses" class="section">
-        <h2>Courses and Certifications</h2>
-        <div class="experience-grid">
-            <div class="experience-card">
-				<p>DataCamp Career Track <strong> Machine Learning Engineer</strong> 2024</p>
-				<!-- Hidden content -->
-				<div class="more-content" style="display: none;">
-					<ol style="padding-left: 30px;  text-align: justify;">
-						<li>MLOps Concepts </li>
-						<li>End-to-End Machine Learning</li>
-						<li>Developing Machine Learning Models for Production</li>
-						<li>Introduction Shell</li>
-						<li>Predictive Modeling for Agriculture (Project)</li>
-						<li>MLOps Development Life Cycling</li>
-						<li>Introduction to MLflow</li>
-						<li>Fully Automated MLOps</li>
-						<li>Predicting Temperature in London (Project)</li>
-						<li>ETL and ELT in Python</li>
-						<li>Monitoring Machine Learning Concepts</li>
-						<li>Monitoring Machine Learning in Python</li>
-						<li>Developing Machine Learning Models for Production</li>
-						<li>Introduction to Docker</li>
-						<li>CI/CD for Machine Learning</li>
-					</ol>
+			<!-- Card 2 -->
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<h3>Individual Courses</h3>
+						<p>DataCamp 2024</p>
+					</div>
+					<div class="flip-card-back">
+						<ol>
+							<li>Introduction to Deep Learning in Python</li>
+							<li>Advanced Deep Learning with Keras</li>
+							<li>Image Modeling with Keras</li>
+						</ol>
+					</div>
 				</div>
-				<!-- See More Button -->
-				<button class="see-more-btn">See More</button>
 			</div>
-			
-            <div class="experience-card">
-				<p>DataCamp <strong>Individual Courses</strong> 2024</p>
-				<!-- Hidden content -->
-				<div class="more-content" style="display: none;">
-					<ol style="padding-left: 30px;  text-align: justify;">
-						<li>Introduction to Deep Learning in Python</li>
-						<li>Advanced Deep Learning with Keras</li>
-						<li>Image Modeling with Keras</li>
-					</ol>
+
+			<!-- Card 3 -->
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<h3>Python Course</h3>
+						<p>Udemy 2020</p>
+					</div>
+					<div class="flip-card-back">
+						<ol>
+							<li>Learn Python The Complete Python Programming Course from Udemy</li>
+						</ol>
+					</div>
 				</div>
-				<!-- See More Button -->
-				<button class="see-more-btn">See More</button>
 			</div>
-            <div class="experience-card">
-                <p>Learn Python The Complete Python Programming Course from Udemy</p>
-            </div>
-			
-			<div class="experience-card">
-                <p>telc Deutsch B1</p>
-            </div>
-			
-        </div>
-    </section>
+		
+			<!-- Card 4 -->
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<h3>Deutsch Course</h3>
+						<p>TELC 2024</p>
+					</div>
+					<div class="flip-card-back">
+						<ol>
+							<li>TELC Deutsch B1</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</section>
 
     <!-- Career Goals Section -->
     <section id="goals" class="section">
