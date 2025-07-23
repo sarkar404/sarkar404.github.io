@@ -1,1161 +1,379 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Muhammad Manzar Hussain</title>
-	
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Wireless Communication Engineer with expertise in Automotive Telematics, RF Measurement, and Machine Learning. Skilled in Wi-Fi, Bluetooth, UWB, and emerging wireless technologies.">
-    <meta name="keywords" content="Wireless Communication Engineer, Automotive Telematics, Machine Learning, Wi-Fi, Bluetooth, UWB, RF, Data Analysis, Test Automation">
-    <meta name="author" content="Muhammad Manzar Hussain">
-    <meta property="og:title" content="Muhammad Manzar Hussain">
-    <meta property="og:description" content="Wireless Communication Engineer specializing in Wi-Fi, Bluetooth, UWB, and automotive telematics.">
-    <meta property="og:image" content="Photo_Manzar.jpg">
-    <meta property="og:url" content="http://yourwebsite.com">
-    <meta property="og:type" content="website">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for icons -->
-    <script defer src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-	<!-- FontAwesome for icons in contacts -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
-    
-	<!-- CSS Stylesheet -->
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Nunito', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            scroll-behavior: smooth;
-            -webkit-user-select: none; /* Disable text selection */
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-		
-        .container {
-            max-width: 1100px;
-            margin: 4rem auto;
-            text-align: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Navigation Bar */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 1rem 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        nav a {
-            margin: 0 1.5rem;
-            font-weight: 500;
-            color: #333;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #007acc;
-        }
-		
-		nav a.active {
-			color: #007acc;
-			font-weight: bold;
-		}
-
-		
-        .logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(to right, #007acc, #00a7ff), url('your_background_image.jpg') no-repeat center;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            animation: fadeIn 2s ease-in-out;
-            overflow: hidden;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
-            animation: slideDown 1.5s ease-in-out;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
-            animation: fadeIn 2.5s ease-in-out;
-        }
-
-        .hero .cta {
-            background-color: #ff6b6b;
-            padding: 0.75rem 1.5rem;
-            border-radius: 30px;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .hero .cta:hover {
-            background-color: #ff3b3b;
-            transform: scale(1.1);
-            box-shadow: 0px 0px 20px rgba(255, 107, 107, 0.8);
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes slideDown {
-            0% { transform: translateY(-50px); }
-            100% { transform: translateY(0); }
-        }
-
-        /* Content Sections */
-        .section {
-            max-width: 1100px;
-            margin: 4rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #007acc;
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .section h2:after {
-            content: '';
-            position: absolute;
-            width: 100px;
-            height: 4px;
-            background-color: #007acc;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .section p, .section ul {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            color: #333;
-        }
-
-        /* Professional Experience Hover Effect */
-        .experience-grid {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-		
-		
-        /* Skills Section */
-        .skills-section {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
-            grid-gap: 2rem;
-        }
-
-        .skill-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, margin-bottom 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            max-height: 230px; /* Initial height */
-        }
-
-        .skill-card.expanded {
-            max-height: 600px; /* Expanded height */
-            grid-row-end: span 2; /* Expand the card to push next row */
-        }
-
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 20px rgba(0, 122, 204, 0.5);
-        }
-
-        .skill-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: #007acc;
-        }
-		
-		.skill-card h3 {
-			font-size: 1.3rem;
-			margin-top: 1rem;
-			margin-bottom: 1rem;
-			color: #007acc;
-			text-align: center;  /* Center the heading */
-			display: block;
-			width: 100%;  /* Ensure the heading spans across the entire card */
-		}
-
-        /* Icon inside the circle with border */
-        .progress-circle {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 5px solid #007acc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem auto;
-            position: relative;
-        }
-
-        /* Replace percentage with an icon */
-        .progress-circle i {
-            font-size: 48px;
-            color: #007acc;
-        }
-
-        /* Slide-down for sub-skills */
-        .sub-skills {
-            background-color: white;
-            padding: 1rem;
-            width: 100%;
-            transition: opacity 0.5s ease;
-            opacity: 0;
-            overflow: hidden;
-        }
-
-        .skill-card:hover .sub-skills {
-            opacity: 1;
-        }
-
-        .sub-skills ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: left;
-        }
-
-        .sub-skills li {
-            margin-bottom: 10px;
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
-            position: relative;
-        }
-
-        /* Hover on each sub-skill to show proficiency level */
-        .sub-skills li:hover::after {
-            content: attr(data-level);
-            position: absolute;
-            right: 10px;
-            background-color: #fff;
-            padding: 0.2rem 0.5rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            color: #007acc;
-            font-size: 0.8rem;
-        }
-		
-
-        .experience-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: left;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: calc(50% - 1rem);
-        }
-
-        .experience-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 20px rgba(0, 122, 204, 0.5);
-        }
-		
-		.experience-card p {
-			margin-bottom: 0.5rem;
-		}
-
-		.experience-card .designation {
-			font-weight: bold;
-			font-size: 1.2rem;
-		}
-
-		.experience-card .duration-location {
-			display: flex;
-			justify-content: space-between;
-		}
-
-
-        /* Educational Background */
-        .education-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        footer p {
-            margin-bottom: 1rem;
-        }
-
-        footer .social-icons a {
-            margin: 0 0.5rem;
-            color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        footer .social-icons a:hover {
-            color: #ff6b6b;
-        }
-
-        /* Back to top button */
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #007acc;
-            color: #fff;
-            padding: 10px;
-            border-radius: 50%;
-            display: none;
-        }
-
-        .back-to-top:hover {
-            background-color: #005f99;
-        }
-
-
-
-
-		.flip-card-container {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
-			gap: 80px;
-			max-width: 1000px;
-			margin: 0 auto;
-			padding: 20px;
-		}
-
-		.flip-card {
-			background-color: transparent;
-			width: 100%;
-			height: 300px;
-			perspective: 1000px;
-		}
-
-		.flip-card-inner {
-			position: relative;
-			width: 100%;
-			height: 115%;
-			text-align: center;
-			transition: transform 0.8s;
-			transform-style: preserve-3d;
-		}
-
-		.flip-card:hover .flip-card-inner {
-			transform: rotateY(180deg);
-		}
-
-		.flip-card-front, .flip-card-back {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			backface-visibility: hidden;
-			border-radius: 10px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-		}
-
-		.flip-card-front {
-			background-color: #007acc;
-			color: white;
-			padding: 20px;
-		}
-
-		.flip-card-back {
-			background-color: white;
-			color: #333;
-			transform: rotateY(180deg);
-			padding: 20px;
-		}
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-			
-            .hero p {
-                font-size: 1.2rem;
-            }
-			
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-			
-            .experience-grid {
-                flex-direction: column;
-            }
-			
-            .experience-card {
-                width: 100%;
-				margin-bottom: 2rem;
-            }
-			
-            .education-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-		.see-more-btn {
-			background-color: #007acc;
-			color: white;
-			padding: 0.5rem 1rem;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-			margin-top: 1rem;
-			transition: background-color 0.3s ease;
-		}
-		
-		.see-more-btn:hover {
-			background-color: #005f99;
-		}
-		
-		.more-content {
-			<!-- display: none; -->
-			max-height: 0;
-			overflow: hidden;
-			<!-- transition: max-height 0.5s ease-out; -->
-			transition: max-height 0.5s ease;
-		}
-		.more-content.open {
-			<!-- display: block; -->
-			max-height: 1000px; /* Adjust based on your content */
-		}
-
-    </style>
+  <meta charset="UTF-8">
+  <title>Muhammad Manzar Hussain | Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Wireless Communication Engineer Portfolio">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <div class="logo">MMH</div>
-            <div>
-                <a href="#about">About</a>
-				<a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
-                <a href="#courses">Certifications</a>
-				 <a href="#goals">Career Goals</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
+  <div id="scroll-progress"></div>
+  <nav>
+    <!-- <span class="brand">MMH</span> -->
+    <ul>
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#competencies">Competencies</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#pursuits">Learning</a></li>
+      <li><a href="#linguistic">Languages</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+	<button class="toggle-dark" title="Toggle dark/light mode">
+      <i class="bi bi-moon"></i>
+    </button>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Muhammad Manzar Hussain</h1>
-        <p>Wireless Connectivity and Performance Evaluation | Automotive Telematics and Infotainment Systems <br> RF Signal Measurement and Coexistence Testing | Test Automation and Data Analysis </p>
-        <a href="cv_hussain.pdf" class="cta" target="_blank" download>Download CV</a>
-    </section>
+<!-- HERO SECTION -->
+<section id="hero">
+  <!-- ray‑simulation canvas -->
+  <canvas id="multipathCanvas"></canvas>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-		<p style="text-align: justify;">
-			Over 5 years of experience in automotive connectivity, specializing in designing, automating, and executing tests for Wi‑Fi, Bluetooth, and UWB systems in both lab and field settings. Proficient in advanced lab instrumentation including signal generators, spectrum, and network analyzers for precise PHY/MAC layer analysis, coexistence testing, and OTA performance evaluation. Demonstrated ability to deliver market-driven, innovative test strategies that align with industry standards and regulatory demands, coupled with strong communication skills, global team leadership, and a strategic market-oriented mindset.
-		</p>
-	</section>
-	
-	<!-- Experience Section -->
-	<section id="experience" class="section">
-		<h2>Professional Experience</h2>
-		<div class="experience-grid" style="flex-direction: column;">
-			<!-- 1 Experience of perisens GmbH -->
-			
-			<!-- Experience Card 1 -->
-			<div class="experience-card" style="width: 100%;">
-				<h3>Perisens GmbH</h3>
-				<p class="designation"><em>Wireless Communication Engineer</em></p>
-				<div class="duration-location">
-					<p class="duration">April 2020 - Present</p>
-					<p class="location">Feldkirchen, Germany</p>
-				</div>
-				<!-- Hidden content -->
-				<div class="more-content" style="display: none;">
-					<ul style="padding-left: 30px;  text-align: justify;">
-						<li>Expertise in 802.11a/b/g/n/ac/ax/be, Bluetooth/BLE, and UWB technologies.</li>
-						<li>Developed in-vehicles non-invasive health monitoring solutions leveraging Wi-Fi & UWB.</li>
-						<li>Measured and analyzed Bluetooth signal strength, transmit power, and range; evaluated the advertising and scanning efficiency of a smartphone using a rotary platform for 360-degree analysis.</li>
-						<li>Performed comprehensive field and laboratory measurements, including evaluations of connection stability, reconnection performance, Tx Power, RSSI, throughput, data rates, latency, packet loss rates, and coverage area.</li>
-						<li>Assessed Wi-Fi features such as OFDMA, beamforming, EVM, MCS, antenna gain, SISO/MIMO performance, and frame aggregation efficiency.</li>
-						<li>Identified interference sources and coexistence impacts, tested roaming performance, transition times, and examined Wi-Fi security protocols.</li>
-						<li>Developed performance evaluation tools, managed test beds, automated test setups to streamline testing processes, and utilized RF test equipment effectively.</li>
-						<li>Conducted research on emerging wireless technologies, producing detailed measurement reports, presentations, and user guides.</li>
-					</ul>
-				</div>
-				<!-- See More Button -->
-				<button class="see-more-btn">See More</button>
-			</div>
-		
-			<!-- Experience Card 2 -->
-			<div class="experience-card" style="width: 100%;">
-				<h3>Perisens GmbH</h3>
-				<p class="designation">Working Student</p>
-				<div class="duration-location">
-					<p class="duration">January 2020 - March 2020 --> 3 mos</p>
-					<p class="location">Feldkirchen, Germany</p>
-				</div>
-				<!-- Hidden content -->
-				<div class="more-content" style="display: none;">
-					<ul style="padding-left: 30px; text-align: justify;">
-						<li>Assisted with research and development and provided support to projects in Wireless Communications.</li>
-					</ul>
-				</div>
-				<!-- See More Button -->
-				<button class="see-more-btn">See More</button>
-			</div>
-		
-			<!-- Experience Card 3 -->
-			<div class="experience-card" style="width: 100%;">
-				<h3>Perisens GmbH</h3>
-				<p class="designation">Master Thesis Student</p>
-				<div class="duration-location">
-					<p class="duration">July 2019 - December 2019 --> 6 mos</p>
-					<p class="location">Feldkirchen, Germany</p>
-				</div>
-				<!-- Hidden content -->
-				<div class="more-content" style="display: none;">
-					<ul style="padding-left: 30px; text-align: justify;">
-						<li>"In-Vehicle Human Presence Detection and Breathing Rate Estimation using IEEE 802.11n Channel State Information"
-							<p><i>This master's thesis explores the innovative use of WLAN technology, particularly leveraging the Channel State Information (CSI) from IEEE 802.11n, to detect human presence and estimate breathing rates within vehicles. By analyzing the amplitude and phase shifts in Wi-Fi signals, the system accurately identifies motion and the periodic movements associated with breathing. Extensive tests conducted in a Mercedes-Benz E-Class vehicle demonstrated the system's effectiveness across various seating arrangements and transmitter-receiver configurations. The research offers potential applications in child presence detection, driver fatigue monitoring, and in-vehicle health monitoring, providing a promising non-invasive solution for enhancing automotive safety systems.</i></p>
-						</li>
-					</ul>
-				</div>
-				<!-- See More Button -->
-				<button class="see-more-btn">See More</button>
-			</div>
-		
-			<!-- Experience Card 4 -->
-			<div class="experience-card" style="width: 100%;">
-				<h3>Perisens GmbH</h3>
-				<p class="designation">Internee</p>
-				<div class="duration-location">
-					<p class="duration">April 2019 - June 2019 --> 3 mos</p>
-					<p class="location">Feldkirchen, Germany</p>
-				</div>
-				<!-- Hidden content -->
-				<div class="more-content" style="display: none;">
-					<ul style="padding-left: 30px; text-align: justify;">
-						<li>Modified existing Matlab code for transmission and reception of WLAN packets using SMBV 100a vector Signal Generator and FSVR real-time Spectrum Analyzer respectively.</li>
-						<li>Did Analysis of Multi-Path Channels Using WLAN Packets Preamble.</li>
-					</ul>
-				</div>
-				<!-- See More Button -->
-				<button class="see-more-btn">See More</button>
-			</div>
-			
-			<!-- 2 Experience of Sukkur IBA -->
-			
-			<!-- Experience Card 5 -->
-			<div class="experience-card" style="width: 100%;">
-				<h3>Sukkur IBA University</h3>
-				<p class="designation">Research Assistant</p>
-				<div class="duration-location">
-					<p class="duration">May 2016 - March 2018 --> 1 yr 11 mos</p>
-					<p class="location">Sukkur, Pakistan</p>
-				</div>
-				<!-- Hidden content -->
-				<div class="more-content" style="display: none;">
-					<ul style="padding-left: 30px; text-align: justify;">
-						<li>Digital Fabrication, Designing & Testing Electronics Circuits and Assisting students to create projects.</li>
-					</ul>
-				</div>
-				<!-- See More Button -->
-				<button class="see-more-btn">See More</button>
-			</div>
-		
-			<!-- Experience Card 6 -->
-			<div class="experience-card" style="width: 100%;">
-				<h3>Sukkur IBA University</h3>
-				<p class="designation">Visiting Faculty</p>
-				<div class="duration-location">
-					<p class="duration">August 2015 - March 2016 --> 8 mos</p>
-					<p class="location">Sukkur, Pakistan</p>
-				</div>
-				<!-- Hidden content -->
-				<div class="more-content" style="display: none;">
-					<ul style="padding-left: 30px; text-align: justify;">
-						<li>Part time lecturer for short course of Electrical Engineering focusing on Building Electrician.</li>
-						<li>Prepared and delivered lectures and conducted LAB experiments with students.</li>
-					</ul>
-				</div>
-				<!-- See More Button -->
-				<button class="see-more-btn">See More</button>
-			</div>
-		
-			<!-- Experience Card 7 -->
-			<div class="experience-card" style="width: 100%;">
-				<h3>Pakistan Telecommunication Company Limited (PTCL)</h3>
-				<p class="designation">Internee</p>
-				<div class="duration-location">
-					<p class="duration">June 2015 - July 2015 --> 2 mos</p>
-					<p class="location">Sukkur, Pakistan</p>
-				</div>
-				<!-- Hidden content -->
-				<div class="more-content" style="display: none;">
-					<ul style="padding-left: 30px; text-align: justify;">
-						<li>Gained theoretical and practical experience while working in various departments, including Switching, Transmission, and Optical Fiber Communication.</li>
-					</ul>
-				</div>
-				<!-- See More Button -->
-				<button class="see-more-btn">See More</button>
-			</div>
-		</div>
-	</section>
+  <!-- subtle SVG waves -->
+  <svg class="signals-bg" width="100%" height="100%" viewBox="0 0 1440 500">
+    <path class="wave"  d="M0,300 Q360,100 720,300 T1440,300" />
+    <path class="wave2" d="M0,340 Q360,150 720,340 T1440,340" />
+  </svg>
 
-	<!-- Skills Section -->
-    <section id="skills" class="section">
-		<h2>Skills</h2>
+  <!-- clean glass panel -->
+  <div class="hero-inner professional">
+    <h1 class="hero-title">Muhammad Manzar Hussain</h1>
+    <p class="hero-subtitle" id="typed-text">Wireless Connectivity</p>
+  </div>
+</section>
+
+
+ 
+  <!-- ABOUT ME -->
+  <section id="about" class="section-bg">
+    <div class="container">
+      <h2 class="section-title  text-center" data-aos="fade-down">ABOUT ME</h2>
+      <div class="section-content" data-aos="fade-up">
+        <div class="about-inner">
+          <div class="about-photo" tabindex="0" title="Manzar's Portrait">
+            <img src="Manzar.jpg" alt="Muhammad Manzar Hussain">
+          </div>
+          <div class="about-box">
+            Over 5 years of experience in wireless connectivity, focused on simulating, automating,
+            and testing Wi‑Fi, Bluetooth, UWB, and ZigBee systems in lab and field. Skilled in PHY/MAC
+            analysis, coexistence testing, OTA evaluation, and signal‑processing‑based wireless sensing.
+            Experienced with lab instruments like signal generators, spectrum, and network analyzers.
+            Inventor of a CSI‑based sensing patent and author of conference papers. Strong communicator
+            and proactive team player with a passion for innovative wireless technologies.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL EXPERTISE -->
+  <section id="expertise" class="section-bg">
+    <div class="container">
+      <h2 class="section-title  text-center">TECHNICAL EXPERTISE</h2>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4">
+          <div class="expertise-card">
+            <i class="bi bi-wifi expertise-icon"></i>
+            <h4>Wireless Standards</h4>
+            <p>IEEE 802.11 (ax/be), Bluetooth Classic/BLE, UWB</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="expertise-card">
+            <i class="bi bi-bar-chart-line expertise-icon"></i>
+            <h4>Wi‑Fi Analysis</h4>
+            <p>OFDMA, Beamforming, EVM, MCS, Antenna Gain/Loss, SISO/MIMO, Interference, Roaming, Security</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="expertise-card">
+            <i class="bi bi-speedometer2 expertise-icon"></i>
+            <h4>Connectivity QoS</h4>
+            <p>Coexistence, Latency, Packet Drop, RSSI, Throughput, Data Rates, Coverage</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="expertise-card">
+            <i class="bi bi-shield-lock expertise-icon"></i>
+            <h4>Compliance</h4>
+            <p>FCC, ETSI & Country‑Level Regulations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE COMPETENCIES -->
+  <section id="competencies" class="section-bg competencies-section">
+    <div class="container">
+      <h2 class="section-title  text-center">CORE COMPETENCIES</h2>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4">
+          <div class="competency-card p-4">
+            <i class="bi bi-terminal skill-icon"></i>
+            <h4>Programming</h4>
+            <p>MATLAB, Python, C, Bash/PowerShell</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="competency-card p-4">
+            <i class="bi bi-tools skill-icon"></i>
+            <h4>Tools & Protocols</h4>
+            <p>SSH, ADB, Win‑SCP, iPerf, Wireshark, Bluetooth Explorer</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="competency-card p-4">
+            <i class="bi bi-hdd-stack skill-icon"></i>
+            <h4>Infotainment / Telematics</h4>
+            <p>ET‑Framework, NTG6/7, Gen20x.i2/i3</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="competency-card p-4">
+            <i class="bi bi-cpu skill-icon"></i>
+            <h4>Embedded Platforms</h4>
+            <p>nRF52, DWM1000/3000, Raspberry Pi, Arduino, ESP32</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="competency-card p-4">
+            <i class="bi bi-people skill-icon"></i>
+            <h4>Collaboration</h4>
+            <p>Git/GitLab, Confluence</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="competency-card p-4">
+            <i class="bi bi-file-earmark-text skill-icon"></i>
+            <h4>Documentation & Design</h4>
+            <p>LaTeX, Eagle PCB</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <section id="experience" class="section-bg">
+    <div class="container">
+      <h2 class="section-title text-center">PROFESSIONAL EXPERIENCE</h2>
+      <div class="section-content experience-stack">
+        <div class="experience-item">
+          <i class="bi bi-briefcase experience-icon"></i>
+          <h5>Wireless Communication Engineer</h5>
+          <small>Perisens GmbH | Apr 2020 – Present</small>
+          <p><strong>Integrated Testing & Collaboration:</strong> Defined feature requirements and executed comprehensive lab testing to validate new features, providing actionable insights to chipset manufacturers.</p>
+            <p><strong>Software & Automation:</strong> Developed and optimized performance evaluation tools and automated testing scripts, significantly reducing manual errors and improving testing efficiency.</p>
+            <p><strong>Advanced Lab Expertise:</strong> Utilized advanced lab equipment to perform in-depth testing and validation, ensuring compliance with international automotive and wireless communication standards.</p>
+            <p><strong>Wireless Technology Development:</strong> Innovated methods for breathing estimation inside vehicles using Wi‑Fi and UWB channel data, enhancing in‑vehicle monitoring capabilities.</p>
+            <p><strong>Signal Analysis & Evaluation:</strong> Conducted thorough analysis of Bluetooth RSSI, transmit power, and range; assessed smartphone advertising and scanning efficiency and performed antenna polarization evaluations for cross‑device compatibility.</p>
+            <p><strong>Market & Technology Research:</strong> Researched emerging wireless technologies, evaluating technical specifications, market applications, and integration strategies to drive strategic innovation and product development.</p>
+            <p><strong>Documentation & Reporting:</strong> Produced detailed technical documentation, including test reports, result analyses, and user manuals, ensuring reproducibility and clarity.</p>
+        </div>
+        <div class="experience-item">
+          <i class="bi bi-person-workspace experience-icon"></i>
+          <h5>Intern</h5>
+          <small>Perisens GmbH | Apr 2019 – Jun 2019</small>
+            <p>Assisted with research and development and provided support to projects in Wireless Communications.</p>
+            <p>Modified existing MATLAB code for transmission and reception of WLAN packets using SMBV100a vector Signal Generator and FSVR real‑time Spectrum Analyzer.</p>
+            <p>Performed analysis of multi‑path channels using WLAN packet preambles.</p>
+        </div>
+        <div class="experience-item">
+          <i class="bi bi-mortarboard experience-icon"></i>
+          <h5>Research Assistant & Visiting Faculty</h5>
+          <small>Sukkur IBA University, Pakistan | Aug 2015 – Mar 2018</small>
+            <p>Digital fabrication: designed & tested electronic circuits and mentored students on project builds.</p>
+            <p>Served as part‑time lecturer for an Electrical Engineering short course on building electrician skills.</p>
+            <p>Prepared and delivered lectures and hands‑on lab experiments to undergraduate students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATIONAL BACKGROUND -->
+  <section id="education" class="section-bg">
+    <div class="container">
+      <h2 class="section-title text-center">EDUCATIONAL BACKGROUND</h2>
+      <div class="section-content glass p-4">
+        <div class="edu-card">
+          <h5>Master of Science (M.Sc.) in Electronics Engineering</h5>
+          <small class="text-muted">Hochschule Bremen, Germany | March 2018 – March 2020</small>
+          <p><strong>Dissertation:</strong></p>
+          <div class="dissertation">
+            This master’s thesis explores the innovative use of WLAN technology, leveraging the Channel State Information (CSI) from IEEE 802.11n to detect human presence and estimate breathing rates within vehicles. By analyzing amplitude and phase shifts in Wi‑Fi signals, the system accurately identifies motion and the periodic movements associated with breathing. Extensive tests in a Mercedes‑Benz E‑Class demonstrated its effectiveness across seating arrangements and transmitter‑receiver configurations. Potential applications include child‐presence detection, driver‐fatigue monitoring, and in‑vehicle health surveillance, offering a promising non‑invasive enhancement for automotive safety systems.
+          </div>
+          <p><strong>Relevant Coursework:</strong> Communication Networks, Optical Communication, Laser Systems & Applications, Analogue & Mixed Signal Circuit Design, Micro Technology and Micro Systems, Material Science, Project Management & Team‑Building</p>
+          <p><strong>GPA:</strong> 1.6 (German Grading Scale)</p>
+        </div>
+        <div class="edu-card">
+          <h5>Bachelor of Engineering (B.E.) in Electrical (Telecommunication) Engineering</h5>
+          <small class="text-muted">Sukkur IBA University | August 2011 – November 2015</small>
+          <p><strong>Dissertation:</strong></p>
+          <div class="dissertation">
+            This bachelor’s thesis investigates the downlink performance of two‑tier cellular networks by employing stochastic geometry and advanced spatial models—Voronoi tessellations for cell structures and the Hard‑Core Point Process for base station placement. Three scenarios are analyzed: a single‑tier macrocell environment, a standard macro‑femto coexistence model, and an enhanced two‑tier design incorporating interference mitigation. The enhanced approach segments cells into center and edge regions, applies fractional frequency reuse, and uses adaptive power control to counteract interference. Simulation results demonstrate notable gains in coverage, capacity, and outage reduction, offering valuable guidance for resilient urban network deployments.
+          </div>
+          <p><strong>Relevant Coursework:</strong> Communication Networks, Optical Communication, Laser Systems & Applications, Analogue & Mixed Signal Circuit Design, Micro Technology and Micro Systems, Material Science, Project Management & Team‑Building</p>
+          <p><strong>GPA:</strong> 1.6 (German Grading Scale)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS & PATENTS -->
+  <section id="publications" class="section-bg publications-section">
+    <div class="container">
+      <h2 class="section-title text-center">PUBLICATIONS & PATENTS</h2>
+      <div class="section-content glass p-4">
+        <ul>
+          <li>Patent, 2022: "Vehicle having a presence detection system and warning method alerting to a living being having been forgotten in a vehicle"</li>
+          <li>Conference, 2020: "In-Vehicle Breathing Rate Monitoring Based on WiFi Signals"</li>
+          <li>Matlab Expo, 2019: "Analysis of Multi-Path Channels Using the WLAN Packet Preamble"</li>
+          <li>Conference, 2018: "Stochastic geometry based interference alignment in two-tier heterogeneous cellular networks"</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+	<!-- FEATURED PROJECTS -->
+	<section id="projects" class="section-bg">
 		<div class="container">
-			<p>Hover over each skill category to see detailed sub-skills. Hover over sub-skills to see the proficiency level.</p>
-        
-			<div class="skills-section">
-				<!-- Programming Skill Card -->
-				<div class="skill-card" onmouseover="expandCard(this, 0)" onmouseout="shrinkCard(this, 0)">
-					<div class="progress-circle">
-						<i class="fas fa-code"></i> <!-- Programming Icon -->
-					</div>
-					<h3>Programming</h3>
-					<div class="sub-skills">
-						<ul>
-							<li data-level="Expert (90-100%)">MATLAB</li>
-							<li data-level="Expert (90-100%)">Python</li>
-							<li data-level="Advanced (70-90%)">Linux Bash</li>
-							<li data-level="Advanced (70-90%)">Windows Batch & PowerShell</li>
-							<li data-level="Intermediate (40-70%)">C & C++</li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- Communication and Testing Skill Card -->
-				<div class="skill-card" onmouseover="expandCard(this, 1)" onmouseout="shrinkCard(this, 1)">
-					<div class="progress-circle">
-						<i class="fas fa-wifi"></i> <!-- Wireless Communication Icon -->
-					</div>
-					<h3>Communication & Testing</h3>
-					<div class="sub-skills">
-						<ul>
-							<li data-level="Expert (90-100%)">TCP/IP & UDP</li>
-							<li data-level="Expert (90-100%)">iperf/jPerf, Ping, & traceroot</li>
-							<li data-level="Expert (90-100%)">SSH, PuTTY, & Win-SCP</li>
-							<li data-level="Expert (90-100%)">ADB</li>
-							<li data-level="Expert (80-100%)"> Wireshark & Wi-Fi Sniffer</li>
-							<li data-level="Advanced (70-90%)">Ellysis Bluetooth Explorer & Analyzer</li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- RF Measurement Equipment Skill Card -->
-				<div class="skill-card" onmouseover="expandCard(this, 2)" onmouseout="shrinkCard(this, 2)">
-					<div class="progress-circle">
-						<i class="fas fa-broadcast-tower"></i> <!-- RF Equipment Icon -->
-					</div>
-					<h3>RF Measurement Equipment</h3>
-					<div class="sub-skills">
-						<ul>
-							<li data-level="Expert (90-100%)">Spectrum Analyzer</li>
-							<li data-level="Advanced (70-90%)">Signal Generator</li>
-							<li data-level="Advanced (70-90%)">Network Analyzer</li>
-							<li data-level="Intermediate (40-60%)">Channel Emulator</li>
-							<li data-level="Beginner (20-40%)">UHD, USRP, & GNURADIO</li>
-						</ul>
-					</div>
-				</div>
-            
-				<!-- Second Row -->
-			
-				<!-- Automotive Telematics Skill Card -->
-				<div class="skill-card" onmouseover="expandCard(this, 0)" onmouseout="shrinkCard(this, 0)">
-					<div class="progress-circle">
-						<i class="fas fa-car"></i> <!-- Automotive Icon -->
-					</div>
-					<h3>Automotive Telematics</h3>
-					<div class="sub-skills">
-						<ul>
-							<li data-level="Expert (90-100%)">ET-Framework & TUT</li>
-							<li data-level="Expert (90-100%)">NTG6 & NTG7</li>
-							<li data-level="Expert (90-100%)">CIVIC Gen20x.i2 & i3</li>
-						</ul>
-					</div>
-				</div>
-			
-				<!-- Operating Systems Skill Card -->
-				<div class="skill-card" onmouseover="expandCard(this, 0)" onmouseout="shrinkCard(this, 0)">
-					<div class="progress-circle">
-						<i class="fas fa-desktop"></i> <!-- OS Icon -->
-					</div>
-					<h3>Operating Systems</h3>
-					<div class="sub-skills">
-						<ul>
-							<li data-level="Expert (90-100%)">QNX & RichOS</li>
-							<li data-level="Advanced (70-90%))">Android Automotive</li>
-							<li data-level="Advanced (70-90%)">Linux</li>
-							<li data-level="Expert (90-100%)">Windows</li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- Embedded Systems Skill Card -->
-				<div class="skill-card" onmouseover="expandCard(this, 0)" onmouseout="shrinkCard(this, 0)">
-					<div class="progress-circle">
-						<i class="fas fa-microchip"></i> <!-- Embedded Icon -->
-					</div>
-					<h3>Embedded Systems</h3>
-					<div class="sub-skills">
-						<ul>
-							<li data-level="Advanced (70-90%)">NRF52 DK (BLE)</li>
-							<li data-level="Advanced (70-90%)">UWB DWM1000/3000</li>
-							<li data-level="Advanced (70-90%)">Raspberry Pi</li>
-							<li data-level="Advanced (70-90%)">Arduino & ESP32</li>
-						</ul>
-					</div>
-				</div>
-			
-				<!-- Third Row -->
-			
-				<!-- Version Control & Documentation Skill Card -->
-				<div class="skill-card" onmouseover="expandCard(this, 0)" onmouseout="shrinkCard(this, 0)">
-					<div class="progress-circle">
-						<i class="fas fa-code-branch"></i> <!-- Version Control Icon -->
-					</div>
-					<h3>Version Control & Documentation</h3>
-					<div class="sub-skills">
-						<ul>
-							<li data-level="Advanced (70-90%)">Git & Gitlab</li>
-							<li data-level="Expert (90-100%)">Confluence</li>
-							<li data-level="Expert (90-100%)">Latex & MS-Office</li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- Machine Learning & Deep Learning Skill Card -->
-				<div class="skill-card" onmouseover="expandCard(this, 0)" onmouseout="shrinkCard(this, 0)">
-					<div class="progress-circle">
-						<i class="fas fa-robot"></i> <!-- Machine Learning Icon -->
-					</div>
-					<h3>Machine & Deep Learning</h3>
-					<div class="sub-skills">
-						<ul>
-							<li data-level="Beginner (20-40%)">Scikit-Learn & XGBoost</li>
-							<li data-level="Beginner (20-40%)">TesorFlow & Keras</li>
-							<li data-level="Beginner (20-40%)">Pytorch & CNNs</li>
-							<li data-level="Beginner (20-40%)">Pandas & Numpy</li>
-							<li data-level="Beginner (20-40%)">Matplotlib & Seaborn</li>
-							<li data-level="Beginner (20-40%)">Docker. MLFlow, DVC</li>
-						</ul>
-					</div>
-				</div>
-            
-				<!-- Linguistic proficiency Skill Card -->
-				<div class="skill-card" onmouseover="expandCard(this, 0)" onmouseout="shrinkCard(this, 0)">
-					<div class="progress-circle">
-						<i class="fas fa-language"></i> <!-- Language Icon -->
-					</div>
-					<h3>Linguistic Proficiency</h3>
-					<div class="sub-skills">
-						<ul>
-							<li data-level="Advanced (70-90%)">English</li>
-							<li data-level="Intermediate (40-60%)">German</li>
-							<li data-level="Expert (90-100%)">Sindhi</li>
-							<li data-level="Expert (90-100%)">Urdu</li>
-						</ul>
-					</div>
-				</div>
-            
+			<h2 class="section-title text-center">FEATURED PROJECTS</h2>
+			<div class="section-content projects-grid">
+				<div class="project-card">
+				<h5>Facial Recognition System (Ongoing)</h5>
+				<ul>
+					<li>Developing a face recognition attendance system using Python, OpenCV, and TensorFlow</li>
+					<li>Integrating camera input, database handling, and front‑end interface for real‑world deployment</li>
+					<li>Enhancing understanding of AI/ML through hands‑on development</li>
+				</ul>
+			</div>
+      <!-- add more .project-card here if needed -->
 			</div>
 		</div>
 	</section>
+
 	
-	
-	<!-- Education Section -->
-	<section id="education" class="section">
-		<h2>Educational Background</h2>
-		<div class="education-grid">
-        
-			<!-- Master of Science (M.Sc.) in Electronics Engineering -->
-			<div class="experience-card" style="width: 100%;">
-				<h3>Hochschule Bremen</h3>
-				<p class="designation">Master of Science (M.Sc.) in Electronics Engineering</p>
-				<div class="duration-location">
-					<p class="duration">March 2018 - March 2020</p>
-					<p class="location">Bremen, Germany</p>
+	<!-- RECENT EDUCATIONAL PURSUITS -->
+	<section id="pursuits" class="section-bg">
+		<div class="container">
+			<h2 class="section-title text-center">RECENT EDUCATIONAL PURSUITS</h2>
+			<div class="section-content pursuits-grid">
+				<div class="pursuit-card">
+					<h5>Machine Learning Engineer Track (DataCamp)</h5>
+					<p>
+						MLOps Concepts · Intro to MLflow · End‑to‑End Machine Learning · Fully Automated MLOps ·
+						Developing Models for Production · Predicting London Temperature (project) · Shell ETL/ELT in Python ·
+						Predictive Modeling for Agriculture (project) · Monitoring ML Concepts · MLOps Deployment & Lifecycle ·
+						ML in Python · Docker & CI/CD for ML
+					</p>
 				</div>
-				<!-- Hidden content -->
-				<div class="more-content" style="display: none;">
-					<p><strong>Thesis:</strong> In-Vehicle Human Presence Detection and Breathing Rate Estimation using IEEE 802.11n Channel State Information</p>
-					<p><strong>Relevant Coursework:</strong> Communication Networks, Optical Communication, Laser Systems & Applications, Analogue & Mixed Signal Circuit Design, Micro Technology and Micro Systems, Material Sceince, and Project Management & Team-building</p>
-					<p><strong>GPA:</strong> 1.6 (German Grading Scale)</p>
+				<div class="pursuit-card">
+				<h5>Individual Courses</h5>
+					<p>
+						Introduction to Deep Learning in Python · Programming for Beginners (C) · Advanced Deep Learning with Keras ·
+						Advanced C Programming (In Progress) · Image Modeling with Keras
+					</p>
 				</div>
-				<!-- See More Button -->
-				<button class="see-more-btn">See More</button>
 			</div>
-		
-			<!-- Bachelor of Engineering (B.E.) in Electrical (Telecommunication) Engineering -->
-			<div class="experience-card" style="width: 100%;">
-				<h3>Sukkur IBA University</h3>
-				<p class="designation">Bachelor of Engineering (B.E.) in Electrical (Telecommunication) Engineering</p>
-				<div class="duration-location">
-					<p class="duration">August 2011 - November 2015</p>
-					<p class="location">Sukkur, Pakistan</p>
-				</div>
-				<!-- Hidden content -->
-				<div class="more-content" style="display: none;">
-					<p><strong>Thesis:</strong> Interference Alignment in Two-tier Heterogeneous Cellular Network</p>
-					<p><strong>Relevant Coursework:</strong> Wireless & Mobile Communication Networks, Analogue and Digital Communication, Digital Signal Processing, Microwave & RF Engineering, Algorithms & Data Structures, Programming (C++) for Engineers, and Digital Design</p>
-					<p><strong>Honors & Awards:</strong> Awarded with fully funded "THP Scholarship”" for foundation semester and "NICT Scholarship" by Ministry of IT Pakistan for whole degree program</p>
-					<p><strong>Extracurricular Activities:</strong> Member of IEEE Student Branch as a "Head of Documentation" and Volunteer at Green Office (Environment Sustainability)</p>
-					<p><strong>CGPA:</strong> 2.9/4.0</p>
-				</div>
-				<!-- See More Button -->
-				<button class="see-more-btn">See More</button>
-			</div>
-		
 		</div>
-	</section>
-	
-	
-	
-	 <!-- Courses and Certifications Section -->
-	<section id="courses" class="section">
-		<h2>Courses and Certifications</h2>
-		<div class="flip-card-container">
-			<!-- Card 1 -->
-				<div class="flip-card">
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-						<h3>Machine Learning Engineer</h3>
-						<p>DataCamp Career Track 2024</p>
-					</div>
-					<div class="flip-card-back">
-						<ol>
-							<li>MLOps Concepts </li>
-							<li>End-to-End Machine Learning</li>
-							<li>Developing Machine Learning Models for Production</li>
-							<li>Introduction Shell</li>
-							<li>Predictive Modeling for Agriculture (Project)</li>
-							<li>MLOps Development Life Cycling</li>
-							<li>Introduction to MLflow</li>
-							<li>Fully Automated MLOps</li>
-							<li>Predicting Temperature in London (Project)</li>
-							<li>ETL and ELT in Python</li>
-							<li>Monitoring Machine Learning Concepts</li>
-							<li>Monitoring Machine Learning in Python</li>
-							<li>Developing Machine Learning Models for Production</li>
-							<li>Introduction to Docker</li>
-							<li>CI/CD for Machine Learning</li>
-						</ol>
-					</div>
-				</div>
-			</div>
+		</section>
 
-			<!-- Card 2 -->
-			<div class="flip-card">
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-						<h3>Individual Courses</h3>
-						<p>DataCamp 2024</p>
-					</div>
-					<div class="flip-card-back">
-						<ol>
-							<li>Introduction to Deep Learning in Python</li>
-							<li>Advanced Deep Learning with Keras</li>
-							<li>Image Modeling with Keras</li>
-						</ol>
-					</div>
-				</div>
-			</div>
 
-			<!-- Card 3 -->
-			<div class="flip-card">
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-						<h3>Python Course</h3>
-						<p>Udemy 2020</p>
-					</div>
-					<div class="flip-card-back">
-						<ol>
-							<li>Learn Python The Complete Python Programming Course from Udemy</li>
-						</ol>
-					</div>
-				</div>
+  <!-- LINGUISTIC PROFICIENCY -->
+  <section id="linguistic" class="section-bg">
+    <div class="container">
+      <h2 class="section-title text-center">LINGUISTIC PROFICIENCY</h2>
+      <div class="section-content linguistic-list">
+        <span>English: Professional</span>
+        <span>German: Intermediate (B1)</span>
+        <span>Sindhi & Urdu: Native</span>
+      </div>
+    </div>
+  </section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-bg">
+  <div class="container">
+    <h2 class="section-title">CONTACT</h2>
+    <ul class="contact-list">
+      <li>
+        <a href="cv_hussain.pdf"
+           title="Open Curriculum Vitae (PDF)"
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="bi bi-file-earmark-pdf-fill"></i>
+          <span>Curriculum Vitae</span>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:engr.manzar404@gmail.com" title="Send Email">
+          <i class="bi bi-envelope-fill"></i>
+          <span>Email</span>
+        </a>
+      </li>
+      <li>
+        <a href="tel:+4915213023335" title="Call Mobile">
+          <i class="bi bi-telephone-fill"></i>
+          <span>Mobile</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/manzar404/" target="_blank" rel="noopener noreferrer" title="View LinkedIn Profile">
+          <i class="bi bi-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://scholar.google.com/citations?user=CdFBs4MAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" title="View Google Scholar Profile">
+          <i class="bi bi-book-half"></i>
+          <span>Google Scholar</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/sarkar404" target="_blank" rel="noopener noreferrer" title="View GitHub Repositories">
+          <i class="bi bi-github"></i>
+          <span>GitHub</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+	<!-- FOOTER -->
+	<footer>
+		<div class="wifi-center">
+			<div id="center-dot" class="center-dot">
+				<span class="dot-text">Manzar-Fi</span>
 			</div>
-		
-			<!-- Card 4 -->
-			<div class="flip-card">
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-						<h3>Deutsch Course</h3>
-						<p>TELC 2024</p>
-					</div>
-					<div class="flip-card-back">
-						<ol>
-							<li>TELC Deutsch B1</li>
-						</ol>
-					</div>
-				</div>
+			<!-- Fixed ripple spans for consistent animation -->
+			<div id="wave-pulse" class="wave-pulse">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
-		
 		</div>
-	</section>
+	</footer>
 
-    <!-- Career Goals Section -->
-    <section id="goals" class="section">
-        <h2>Career Goals</h2>
-        <p style="text-align: justify;">I aim to bridge my expertise in wireless communication with machine learning to develop intelligent wireless systems. My goal is to lead projects that push the boundaries of wireless technologies and contribute to innovations in automotive telematics and smart connectivity solutions.</p>
-    </section>
+	<!-- TOP BUTTON -->
+	<button id="topBtn" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
 
-	<!-- Contact Section -->
-	<section id="contact" class="section">
-		<h2>Contact Me</h2>
-		<p style="text-align: justify;">I am open to collaboration and project opportunities in wireless communication and system optimization. Let's connect and explore potential collaborations.</p>
-		<p><strong>Email:</strong> engr.manzar404@gmail.com<br>
-		<strong>Phone:</strong> +49 15787888767<br>
-		<div style="margin-top: 20px;">
-			<a href="https://www.linkedin.com/in/manzar404/" target="_blank" style="margin-right: 20px;">
-				<i class="fab fa-linkedin" style="font-size: 40px; color: #0A66C2;"></i>
-			</a>
-			<a href="https://scholar.google.com/citations?user=CdFBs4MAAAAJ&hl=en" target="_blank" style="margin-right: 20px;">
-				<i class="fas fa-graduation-cap" style="font-size: 40px; color: #4285F4;"></i>
-			</a>
-			<a href="https://github.com/sarkar404" target="_blank">
-				<i class="fab fa-github" style="font-size: 40px; color: #171515;"></i>
-			</a>
-		</div>
-	</section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>Copyright © Muhammad Manzar Hussain 2024</p>
-    </footer>
-
-    <!-- JavaScript for smooth scrolling -->
-<!-- JavaScript for smooth scrolling and See More functionality -->
-	<script>
-		// Smooth Scrolling
-		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-			anchor.addEventListener('click', function (e) {
-				e.preventDefault();
-				const target = document.querySelector(this.getAttribute('href'));
-				window.scrollTo({
-					top: target.offsetTop,
-					behavior: 'smooth'
-				});
-			});
-		});
-
-		// Show back-to-top button when scrolling
-		window.addEventListener('scroll', function() {
-			const scrollPosition = window.scrollY;
-			const backToTopButton = document.querySelector('.back-to-top');
-			if (scrollPosition > 300) {
-				backToTopButton.style.display = 'block';
-			} else {
-				backToTopButton.style.display = 'none';
-			}
-		});
-		
-		// Disable right-click and text selection
-		document.addEventListener('contextmenu', function(e) {
-			e.preventDefault();
-		});
-
-		// See More / See Less functionality for Experience Cards
-		document.querySelectorAll('.see-more-btn').forEach(button => {
-			button.addEventListener('click', function() {
-				const moreContent = this.previousElementSibling;  // Select the sibling 'more-content' div
-				if (moreContent.style.display === "none" || moreContent.style.display === "") {
-					moreContent.style.display = "block";  // Show more content
-					this.textContent = "See Less";  // Change button text
-				} else {
-					moreContent.style.display = "none";  // Hide more content
-					this.textContent = "See More";  // Change button text back to 'See More'
-				}
-			});
-		});
-		
-		// Function to handle the intersection observer callback
-		function handleIntersection(entries, observer) {
-		entries.forEach(entry => {
-			const navLinks = document.querySelectorAll('nav a');
-			const currentSectionId = entry.target.id;
-
-			// Check if the section is intersecting with the viewport
-			if (entry.isIntersecting) {
-				// Remove 'active' class from all links
-				navLinks.forEach(link => link.classList.remove('active'));
-				// Add 'active' class to the link corresponding to the intersecting section
-				const activeLink = document.querySelector(`nav a[href="#${currentSectionId}"]`);
-				if (activeLink) {
-					activeLink.classList.add('active');
-				}
-			}
-		});
-	}
-
-	// Options for the intersection observer
-	const options = {
-		root: null, // Use the viewport as root
-		rootMargin: '0px', // No margin around the root
-		threshold: [0.1, 0.9] // Trigger when 10% and 90% of the section is visible
-	};
-
-	// Create the intersection observer
-	const observer = new IntersectionObserver(handleIntersection, options);
-
-	// Observe each section
-	document.querySelectorAll('section').forEach(section => {
-		observer.observe(section);
-	});
-
-	// Fallback for long sections (like "Experience")
-	window.addEventListener('scroll', function() {
-		let experienceSection = document.querySelector('#experience');
-		let skillsSection = document.querySelector('#skills');
-		let navLinks = document.querySelectorAll('nav a');
-
-		let experienceTop = experienceSection.offsetTop;
-		let experienceHeight = experienceSection.offsetHeight;
-		let skillsTop = skillsSection.offsetTop;
-
-		let scrollPos = window.scrollY || document.documentElement.scrollTop;
-
-		// If the user is within the "Experience" section, keep it highlighted
-		if (scrollPos >= experienceTop && scrollPos < experienceTop + experienceHeight) {
-			navLinks.forEach(link => link.classList.remove('active'));
-			let experienceLink = document.querySelector('nav a[href="#experience"]');
-			experienceLink.classList.add('active');
-		}
-
-		// Ensure "Skills" section gets highlighted properly once "Experience" section ends
-		if (scrollPos >= skillsTop && scrollPos < skillsTop + skillsSection.offsetHeight) {
-			navLinks.forEach(link => link.classList.remove('active'));
-			let skillsLink = document.querySelector('nav a[href="#skills"]');
-			skillsLink.classList.add('active');
-		}
-	});
-
-
-        function expandCard(card, position) {
-            // Add the expanded class to the hovered card
-            card.classList.add("expanded");
-            
-            // Adjust the row below based on the column hovered
-            const skillsSection = document.querySelector('.skills-section');
-            const rowCount = skillsSection.children.length / 2; // Count of cards per row
-            const nextRow = Math.floor(position / rowCount) + 1;
-            const column = position % rowCount;
-            const nextRowCard = skillsSection.children[(nextRow * rowCount) + column];
-
-            if (nextRowCard) {
-                nextRowCard.style.marginTop = '180px'; // Push card down only in the same column
-            }
-        }
-
-        function shrinkCard(card, position) {
-            // Remove the expanded class from the card
-            card.classList.remove("expanded");
-
-            // Reset the row margin when mouse moves out
-            const skillsSection = document.querySelector('.skills-section');
-            const rowCount = skillsSection.children.length / 2; // Count of cards per row
-            const nextRow = Math.floor(position / rowCount) + 1;
-            const column = position % rowCount;
-            const nextRowCard = skillsSection.children[(nextRow * rowCount) + column];
-
-            if (nextRowCard) {
-                nextRowCard.style.marginTop = '0'; // Reset margin
-            }
-        }
-
-		
-	</script>
-
-
-    <!-- Back to top button -->
-    <a href="#top" class="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script.js"></script>
+  <script src="animation.js"></script>
 </body>
 </html>
-
-<!--
-### Machine Learning & Deep Learning Skills
-
-- **Programming Languages**: Python, R, SQL, C++
-- **ML Tools**: Scikit-learn, XGBoost, LightGBM, CatBoost
-- **DL Frameworks**: TensorFlow, Keras, PyTorch, Theano
-- **Neural Networks**: CNN, RNN, LSTM, Transformer, GANs
-- **Data Preprocessing**: Pandas, NumPy, Feature Engineering
-- **Model Evaluation**: Cross-validation, Hyperparameter Tuning, Metrics (Precision, Recall, F1-score)
-- **Big Data**: Apache Spark, Dask, Hadoop
-- **Data Visualization**: Matplotlib, Seaborn, Plotly
-- **Cloud Platforms**: AWS SageMaker, Google Cloud AI, Microsoft Azure
-- **MLOps Tools**: Docker, Kubernetes, MLflow
-- **Natural Language Processing (NLP)**: BERT, GPT, Word2Vec
--->
